@@ -1,0 +1,141 @@
+{
+  "description": "Mock data exported from the Java auto-debugger demo outputs in output/. All file system paths are relative to the demo/ folder. One folder per scenario, one JSON file per pipeline stage.",
+  "scenarios": [
+    {
+      "name": "args",
+      "targetMethod": "com.example.Calculator.add(int, int)",
+      "files": [
+        {
+          "stage": "run-configuration",
+          "path": "mock_data/args/01-run-configuration.json"
+        },
+        {
+          "stage": "instrumentation",
+          "path": "mock_data/args/02-instrumentation.json"
+        },
+        {
+          "stage": "identifier-mapping",
+          "path": "mock_data/args/03-identifier-mapping.json"
+        },
+        {
+          "stage": "analysis",
+          "path": "mock_data/args/04-analysis.json"
+        },
+        {
+          "stage": "trace",
+          "path": "mock_data/args/05-trace.json"
+        },
+        {
+          "stage": "test-generation",
+          "path": "mock_data/args/06-test-generation.json"
+        },
+        {
+          "stage": "test-execution",
+          "path": "mock_data/args/07-test-execution.json"
+        }
+      ]
+    },
+    {
+      "name": "fields",
+      "targetMethod": "com.example.Counter.increment()",
+      "files": [
+        {
+          "stage": "run-configuration",
+          "path": "mock_data/fields/01-run-configuration.json"
+        },
+        {
+          "stage": "instrumentation",
+          "path": "mock_data/fields/02-instrumentation.json"
+        },
+        {
+          "stage": "identifier-mapping",
+          "path": "mock_data/fields/03-identifier-mapping.json"
+        },
+        {
+          "stage": "analysis",
+          "path": "mock_data/fields/04-analysis.json"
+        },
+        {
+          "stage": "trace",
+          "path": "mock_data/fields/05-trace.json"
+        },
+        {
+          "stage": "test-generation",
+          "path": "mock_data/fields/06-test-generation.json"
+        },
+        {
+          "stage": "test-execution",
+          "path": "mock_data/fields/07-test-execution.json"
+        }
+      ]
+    },
+    {
+      "name": "static",
+      "targetMethod": "com.example.Globals.bump()",
+      "files": [
+        {
+          "stage": "run-configuration",
+          "path": "mock_data/static/01-run-configuration.json"
+        },
+        {
+          "stage": "instrumentation",
+          "path": "mock_data/static/02-instrumentation.json"
+        },
+        {
+          "stage": "identifier-mapping",
+          "path": "mock_data/static/03-identifier-mapping.json"
+        },
+        {
+          "stage": "analysis",
+          "path": "mock_data/static/04-analysis.json"
+        },
+        {
+          "stage": "trace",
+          "path": "mock_data/static/05-trace.json"
+        },
+        {
+          "stage": "test-generation",
+          "path": "mock_data/static/06-test-generation.json"
+        },
+        {
+          "stage": "test-execution",
+          "path": "mock_data/static/07-test-execution.json"
+        }
+      ]
+    },
+    {
+      "name": "objects",
+      "targetMethod": "com.example.PersonService.greet(Person)",
+      "files": [
+        {
+          "stage": "run-configuration",
+          "path": "mock_data/objects/01-run-configuration.json"
+        },
+        {
+          "stage": "instrumentation",
+          "path": "mock_data/objects/02-instrumentation.json"
+        },
+        {
+          "stage": "identifier-mapping",
+          "path": "mock_data/objects/03-identifier-mapping.json"
+        },
+        {
+          "stage": "analysis",
+          "path": "mock_data/objects/04-analysis.json"
+        },
+        {
+          "stage": "trace",
+          "path": "mock_data/objects/05-trace.json"
+        },
+        {
+          "stage": "test-generation",
+          "path": "mock_data/objects/06-test-generation.json"
+        },
+        {
+          "stage": "test-execution",
+          "path": "mock_data/objects/07-test-execution.json"
+        }
+      ]
+    }
+  ]
+}

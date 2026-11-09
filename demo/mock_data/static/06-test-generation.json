@@ -1,0 +1,21 @@
+{
+  "scenario": "static",
+  "stage": "test-generation",
+  "provenance": "Reconstructed: TestSuite as Orchestrator.generateTests() builds it; artifacts embed the generated test sources verbatim.",
+  "notes": [],
+  "data": {
+    "$type": "TestSuite",
+    "baseDirectory": "output/static",
+    "testFiles": ["output/static/GlobalsTest.java"]
+  },
+  "artifacts": [
+    {
+      "path": "output/static/GlobalsTest.java",
+      "mediaType": "text/x-java-source",
+      "sizeBytes": 2555,
+      "sha256": "e5c9d9c932f772fa3904322fb5b2b26b76898094e2425abecb1f1ccf581805eb",
+      "encoding": "utf-8",
+      "content": "package com.example;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.BeforeEach;\nimport static org.junit.jupiter.api.Assertions.*;\n\n/**\n * Generated test class for com.example.Globals.bump()\n * Generated on: 2026-10-28T15:44:04.014666662\n * Generation strategy: Naive Trace-Based\n */\npublic class GlobalsTest {\n\n    @Test\n    void testBump_Scenario1() {\n        // Arrange\n\n        // Act\n\n        try {\n            Globals.bump();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testBump_Scenario2() {\n        // Arrange\n\n        // Act\n\n        try {\n            Globals.bump();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testBump_Scenario3() {\n        // Arrange\n\n        // Act\n\n        try {\n            Globals.bump();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testBump_Scenario4() {\n        // Arrange\n\n        // Act\n\n        try {\n            Globals.bump();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n}\n"
+    }
+  ]
+}

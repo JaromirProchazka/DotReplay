@@ -1,0 +1,53 @@
+{
+  "scenario": "fields",
+  "stage": "run-configuration",
+  "provenance": "Reconstructed: JavaRunConfiguration rebuilt from the README Quick Start command with the same JavaMethodSignatureParser calls RunConfigurationFactory makes; exportableValues verified equal to identifiers/identifierMapping9936648855551548931.ser.",
+  "notes": ["Original CLI arguments (run from Java/auto-debugger, the parent of demo/): --jar $(pwd)/demo/fields-app.jar --source $(pwd)/demo/apps/fields/src --output-dir $(pwd)/demo/output/fields --method com.example.Counter.increment() --void-method --fields int:value --disl-home $DISL_HOME --trace-mode naive --test-strategy trace-based-basic", "dislHomePath is null: the DiSL home used for the demo run was not persisted anywhere in output/."],
+  "data": {
+    "$type": "JavaRunConfiguration",
+    "applicationPath": "fields-app.jar",
+    "sourceCodePath": "apps/fields/src",
+    "targetMethod": {
+      "$type": "JavaMethodIdentifier",
+      "methodName": "increment",
+      "returnType": "void",
+      "parameterTypes": [],
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "Counter",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": false
+    },
+    "exportableValues": [
+      {
+        "$type": "JavaFieldIdentifier",
+        "valueType": "FIELD",
+        "type": "int",
+        "internalId": 1,
+        "fieldName": "value",
+        "ownerClassIdentifier": {
+          "$type": "JavaClassIdentifier",
+          "className": "Counter",
+          "packageIdentifier": {
+            "$type": "JavaPackageIdentifier",
+            "packageName": "com.example"
+          }
+        },
+        "isStatic": false
+      }
+    ],
+    "classpathEntries": [],
+    "runtimeArguments": [],
+    "outputDirectory": "output/fields",
+    "language": "JAVA",
+    "traceMode": "NAIVE",
+    "testGenerationStrategy": "trace-based-basic",
+    "maxArgumentCombinations": null,
+    "dislHomePath": null
+  },
+  "artifacts": []
+}

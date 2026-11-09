@@ -1,0 +1,51 @@
+{
+  "scenario": "args",
+  "stage": "run-configuration",
+  "provenance": "Reconstructed: JavaRunConfiguration rebuilt from the README Quick Start command with the same JavaMethodSignatureParser calls RunConfigurationFactory makes; exportableValues verified equal to identifiers/identifierMapping9323586973536625713.ser.",
+  "notes": ["Original CLI arguments (run from Java/auto-debugger, the parent of demo/): --jar $(pwd)/demo/calc-app.jar --source $(pwd)/demo/apps/args/src --output-dir $(pwd)/demo/output/args --method com.example.Calculator.add(int,int) --parameters 0:int --parameters 1:int --disl-home $DISL_HOME --trace-mode naive --test-strategy trace-based-basic", "dislHomePath is null: the DiSL home used for the demo run was not persisted anywhere in output/."],
+  "data": {
+    "$type": "JavaRunConfiguration",
+    "applicationPath": "calc-app.jar",
+    "sourceCodePath": "apps/args/src",
+    "targetMethod": {
+      "$type": "JavaMethodIdentifier",
+      "methodName": "add",
+      "returnType": null,
+      "parameterTypes": ["int", "int"],
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "Calculator",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": false
+    },
+    "exportableValues": [
+      {
+        "$type": "JavaArgumentIdentifier",
+        "valueType": "ARGUMENT",
+        "type": "int",
+        "internalId": 1,
+        "argumentSlot": 0
+      },
+      {
+        "$type": "JavaArgumentIdentifier",
+        "valueType": "ARGUMENT",
+        "type": "int",
+        "internalId": 2,
+        "argumentSlot": 1
+      }
+    ],
+    "classpathEntries": [],
+    "runtimeArguments": [],
+    "outputDirectory": "output/args",
+    "language": "JAVA",
+    "traceMode": "NAIVE",
+    "testGenerationStrategy": "trace-based-basic",
+    "maxArgumentCombinations": null,
+    "dislHomePath": null
+  },
+  "artifacts": []
+}

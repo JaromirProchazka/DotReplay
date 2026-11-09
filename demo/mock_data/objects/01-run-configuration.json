@@ -1,0 +1,44 @@
+{
+  "scenario": "objects",
+  "stage": "run-configuration",
+  "provenance": "Reconstructed: JavaRunConfiguration rebuilt from the README Quick Start command with the same JavaMethodSignatureParser calls RunConfigurationFactory makes; exportableValues verified equal to identifiers/identifierMapping4498239091128703833.ser.",
+  "notes": ["Original CLI arguments (run from Java/auto-debugger, the parent of demo/): --jar $(pwd)/demo/apps/objects/objects-app.jar --source $(pwd)/demo/apps/objects/src --output-dir $(pwd)/demo/output/objects --method com.example.PersonService.greet(com.example.Person) --parameters 0:com.example.Person --disl-home $DISL_HOME --trace-mode naive --test-strategy trace-based-basic", "dislHomePath is null: the DiSL home used for the demo run was not persisted anywhere in output/."],
+  "data": {
+    "$type": "JavaRunConfiguration",
+    "applicationPath": "apps/objects/objects-app.jar",
+    "sourceCodePath": "apps/objects/src",
+    "targetMethod": {
+      "$type": "JavaMethodIdentifier",
+      "methodName": "greet",
+      "returnType": null,
+      "parameterTypes": ["com.example.Person"],
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "PersonService",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": false
+    },
+    "exportableValues": [
+      {
+        "$type": "JavaArgumentIdentifier",
+        "valueType": "ARGUMENT",
+        "type": "com.example.Person",
+        "internalId": 1,
+        "argumentSlot": 0
+      }
+    ],
+    "classpathEntries": [],
+    "runtimeArguments": [],
+    "outputDirectory": "output/objects",
+    "language": "JAVA",
+    "traceMode": "NAIVE",
+    "testGenerationStrategy": "trace-based-basic",
+    "maxArgumentCombinations": null,
+    "dislHomePath": null
+  },
+  "artifacts": []
+}

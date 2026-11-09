@@ -1,0 +1,21 @@
+{
+  "scenario": "fields",
+  "stage": "test-generation",
+  "provenance": "Reconstructed: TestSuite as Orchestrator.generateTests() builds it; artifacts embed the generated test sources verbatim.",
+  "notes": [],
+  "data": {
+    "$type": "TestSuite",
+    "baseDirectory": "output/fields",
+    "testFiles": ["output/fields/CounterTest.java"]
+  },
+  "artifacts": [
+    {
+      "path": "output/fields/CounterTest.java",
+      "mediaType": "text/x-java-source",
+      "sizeBytes": 3102,
+      "sha256": "5d6ad01ec92c1cfba78e34e26664b2eda1ffa165623b820cc326cb21bcc3b2c7",
+      "encoding": "utf-8",
+      "content": "package com.example;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.BeforeEach;\nimport static org.junit.jupiter.api.Assertions.*;\n\n/**\n * Generated test class for com.example.Counter.increment()\n * Generated on: 2026-10-28T15:44:00.889185160\n * Generation strategy: Naive Trace-Based\n */\npublic class CounterTest {\n\n    private com.example.Counter counter;\n\n    @Test\n    void testIncrement_Scenario1() {\n        // Arrange\n        // Initialize counter with appropriate constructor (factory method, etc)\n        counter = new Counter(0);\n\n        // Act\n\n        try {\n            counter.increment();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testIncrement_Scenario2() {\n        // Arrange\n        // Initialize counter with appropriate constructor (factory method, etc)\n        counter = new Counter(1);\n\n        // Act\n\n        try {\n            counter.increment();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testIncrement_Scenario3() {\n        // Arrange\n        // Initialize counter with appropriate constructor (factory method, etc)\n        counter = new Counter(2);\n\n        // Act\n\n        try {\n            counter.increment();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testIncrement_Scenario4() {\n        // Arrange\n        // Initialize counter with appropriate constructor (factory method, etc)\n        counter = new Counter(3);\n\n        // Act\n\n        try {\n            counter.increment();\n\n            // Assert\n            // Method returns void - test verifies execution completes without exception\n            // Note: Add assertions to verify side effects (e.g., field changes)\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n}\n"
+    }
+  ]
+}

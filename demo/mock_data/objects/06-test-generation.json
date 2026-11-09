@@ -1,0 +1,21 @@
+{
+  "scenario": "objects",
+  "stage": "test-generation",
+  "provenance": "Reconstructed: TestSuite as Orchestrator.generateTests() builds it; artifacts embed the generated test sources verbatim.",
+  "notes": [],
+  "data": {
+    "$type": "TestSuite",
+    "baseDirectory": "output/objects",
+    "testFiles": ["output/objects/PersonServiceTest.java"]
+  },
+  "artifacts": [
+    {
+      "path": "output/objects/PersonServiceTest.java",
+      "mediaType": "text/x-java-source",
+      "sizeBytes": 3020,
+      "sha256": "4380cc94a75f6f596d88ac162fdc986bb2ae7c264a151a80f70b64642e96c331",
+      "encoding": "utf-8",
+      "content": "package com.example;\n\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.BeforeEach;\nimport static org.junit.jupiter.api.Assertions.*;\nimport com.example.Person;\n\n/**\n * Generated test class for com.example.PersonService.greet(Person)\n * Generated on: 2026-10-28T15:44:07.550535627\n * Generation strategy: Naive Trace-Based\n */\npublic class PersonServiceTest {\n\n    private com.example.PersonService personservice;\n\n    @Test\n    void testGreet_Scenario1() {\n        // Arrange\n        // Initialize personservice with appropriate constructor (factory method, etc)\n        personservice = new PersonService();\n\n        // Act\n\n        try {\n            var result = personservice.greet(new Person(\"Bob\", 25) /* TODO: verify constructor signature matches (name, age) */);\n\n            // Assert\n            // Basic assertion to verify method execution completed without exception\n            assertNotNull(result, \"Method should return a non-null result\");\n            // Note: Add more specific assertions based on expected behavior\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testGreet_Scenario2() {\n        // Arrange\n        // Initialize personservice with appropriate constructor (factory method, etc)\n        personservice = new PersonService();\n\n        // Act\n\n        try {\n            var result = personservice.greet(new Person(\"Alice\", 30) /* TODO: verify constructor signature matches (name, age) */);\n\n            // Assert\n            // Basic assertion to verify method execution completed without exception\n            assertNotNull(result, \"Method should return a non-null result\");\n            // Note: Add more specific assertions based on expected behavior\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n    @Test\n    void testGreet_Scenario3() {\n        // Arrange\n        // Initialize personservice with appropriate constructor (factory method, etc)\n        personservice = new PersonService();\n\n        // Act\n\n        try {\n            var result = personservice.greet(new Person(\"Charlie\", 35) /* TODO: verify constructor signature matches (name, age) */);\n\n            // Assert\n            // Basic assertion to verify method execution completed without exception\n            assertNotNull(result, \"Method should return a non-null result\");\n            // Note: Add more specific assertions based on expected behavior\n\n        } catch (Exception ex) {\n\n            // No exception should be thrown during method execution\n\n            // Here we check and enforce this property, effectively\n\n            fail(\"Exception: \" + ex.getMessage());\n\n        }\n    }\n\n}\n"
+    }
+  ]
+}

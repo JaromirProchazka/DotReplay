@@ -1,0 +1,13 @@
+{
+  "scenario": "objects",
+  "stage": "analysis",
+  "provenance": "Reconstructed: AnalysisResult as DiSLAnalyzer.executeAnalysis() builds it from the InstrumentationResult.",
+  "notes": [],
+  "data": {
+    "$type": "AnalysisResult",
+    "traceFilePath": "output/objects/traces/trace-20261028-154406-395-e25c7929-a0eb-4e10-8191-4104b660f555.ser",
+    "identifiersMappingPath": "output/objects/identifiers/identifierMapping4498239091128703833.ser",
+    "outputDirectory": "output/objects"
+  },
+  "artifacts": []
+}

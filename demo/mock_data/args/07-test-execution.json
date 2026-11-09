@@ -1,0 +1,138 @@
+{
+  "scenario": "args",
+  "stage": "test-execution",
+  "provenance": "Re-executed on 2026-10-29: TestRunnerFactory.createTestRunner(runConfiguration).executeTests(testSuite.testFiles) on copies of the generated tests. The demo run only logged this result.",
+  "notes": ["Timing fields (totalExecutionTime, executionStartTime, executionEndTime, testResults[].executionTime) come from the re-execution.", "executionTraces is empty: JUnitTestRunner.collectExecutionTraces() is a placeholder and instrumentation is disabled by TestRunnerFactory.", "Artifacts are the original output/args/compiled classes; the re-execution compiled byte-identical classes."],
+  "data": {
+    "$type": "TestExecutionResult",
+    "overallStatus": "PASSED",
+    "testResults": [
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario1",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.014064147S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario2",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.00120304S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario3",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000760397S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario4",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000826901S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario5",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.00058507S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario6",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000522895S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario7",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.00062269S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario8",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000428939S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testAdd_Scenario9",
+        "testClassName": "com.example.CalculatorTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000689575S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      }
+    ],
+    "totalExecutionTime": "PT1.061208864S",
+    "executionStartTime": "2026-10-29T14:24:17.890713141",
+    "executionEndTime": "2026-10-29T14:24:18.951922005",
+    "passedCount": 9,
+    "failedCount": 0,
+    "skippedCount": 0,
+    "failedTestsNames": [],
+    "metadata": {},
+    "rawOutput": "Test execution completed",
+    "executionTraces": []
+  },
+  "artifacts": [
+    {
+      "path": "output/args/compiled/com/example/CalculatorTest.class",
+      "mediaType": "application/java-vm",
+      "sizeBytes": 2731,
+      "sha256": "89c2c0f40e59f231b03a8a9281352d6bf35e48c10351eeca377e73f9c0e66863"
+    }
+  ]
+}

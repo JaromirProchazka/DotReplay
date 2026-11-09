@@ -1,0 +1,30 @@
+{
+  "scenario": "args",
+  "stage": "identifier-mapping",
+  "provenance": "Deserialized 1:1 from identifiers/identifierMapping9323586973536625713.ser (Map<Integer, JavaValueIdentifier>, key = internalId = trace slot id).",
+  "notes": [],
+  "data": {
+    "1": {
+      "$type": "JavaArgumentIdentifier",
+      "valueType": "ARGUMENT",
+      "type": "int",
+      "internalId": 1,
+      "argumentSlot": 0
+    },
+    "2": {
+      "$type": "JavaArgumentIdentifier",
+      "valueType": "ARGUMENT",
+      "type": "int",
+      "internalId": 2,
+      "argumentSlot": 1
+    }
+  },
+  "artifacts": [
+    {
+      "path": "output/args/identifiers/identifierMapping9323586973536625713.ser",
+      "mediaType": "application/x-java-serialized-object",
+      "sizeBytes": 625,
+      "sha256": "5bd49752b93c2a90f77bafe559aefecf2eb3e4a4e25377c06a19a8ca6d562c49"
+    }
+  ]
+}

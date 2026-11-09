@@ -1,0 +1,78 @@
+{
+  "scenario": "static",
+  "stage": "test-execution",
+  "provenance": "Re-executed on 2026-10-29: TestRunnerFactory.createTestRunner(runConfiguration).executeTests(testSuite.testFiles) on copies of the generated tests. The demo run only logged this result.",
+  "notes": ["Timing fields (totalExecutionTime, executionStartTime, executionEndTime, testResults[].executionTime) come from the re-execution.", "executionTraces is empty: JUnitTestRunner.collectExecutionTraces() is a placeholder and instrumentation is disabled by TestRunnerFactory.", "Artifacts are the original output/static/compiled classes; the re-execution compiled byte-identical classes."],
+  "data": {
+    "$type": "TestExecutionResult",
+    "overallStatus": "PASSED",
+    "testResults": [
+      {
+        "$type": "TestResult",
+        "testName": "testBump_Scenario1",
+        "testClassName": "com.example.GlobalsTest",
+        "status": "PASSED",
+        "executionTime": "PT0.001885824S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testBump_Scenario2",
+        "testClassName": "com.example.GlobalsTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000714792S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testBump_Scenario3",
+        "testClassName": "com.example.GlobalsTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000512495S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      },
+      {
+        "$type": "TestResult",
+        "testName": "testBump_Scenario4",
+        "testClassName": "com.example.GlobalsTest",
+        "status": "PASSED",
+        "executionTime": "PT0.000996006S",
+        "errorMessage": null,
+        "stackTrace": null,
+        "expectedValue": null,
+        "actualValue": null,
+        "details": null
+      }
+    ],
+    "totalExecutionTime": "PT0.248207389S",
+    "executionStartTime": "2026-10-29T14:24:19.343027027",
+    "executionEndTime": "2026-10-29T14:24:19.591234416",
+    "passedCount": 4,
+    "failedCount": 0,
+    "skippedCount": 0,
+    "failedTestsNames": [],
+    "metadata": {},
+    "rawOutput": "Test execution completed",
+    "executionTraces": []
+  },
+  "artifacts": [
+    {
+      "path": "output/static/compiled/com/example/GlobalsTest.class",
+      "mediaType": "application/java-vm",
+      "sizeBytes": 1483,
+      "sha256": "9d2620248b721fa39b8907a2318c65b9c79ce3a0a930d3cc817100a83bd91c40"
+    }
+  ]
+}

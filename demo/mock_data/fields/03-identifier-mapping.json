@@ -1,0 +1,32 @@
+{
+  "scenario": "fields",
+  "stage": "identifier-mapping",
+  "provenance": "Deserialized 1:1 from identifiers/identifierMapping9936648855551548931.ser (Map<Integer, JavaValueIdentifier>, key = internalId = trace slot id).",
+  "notes": [],
+  "data": {
+    "1": {
+      "$type": "JavaFieldIdentifier",
+      "valueType": "FIELD",
+      "type": "int",
+      "internalId": 1,
+      "fieldName": "value",
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "Counter",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": false
+    }
+  },
+  "artifacts": [
+    {
+      "path": "output/fields/identifiers/identifierMapping9936648855551548931.ser",
+      "mediaType": "application/x-java-serialized-object",
+      "sizeBytes": 1037,
+      "sha256": "08fa4b1cc085955572a4fa48436afd48ccfadf9541f369ba16b7c4e06809cb35"
+    }
+  ]
+}

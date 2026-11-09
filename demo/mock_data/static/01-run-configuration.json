@@ -1,0 +1,53 @@
+{
+  "scenario": "static",
+  "stage": "run-configuration",
+  "provenance": "Reconstructed: JavaRunConfiguration rebuilt from the README Quick Start command with the same JavaMethodSignatureParser calls RunConfigurationFactory makes; exportableValues verified equal to identifiers/identifierMapping4147239461275721054.ser.",
+  "notes": ["Original CLI arguments (run from Java/auto-debugger, the parent of demo/): --jar $(pwd)/demo/static-app.jar --source $(pwd)/demo/apps/static/src --output-dir $(pwd)/demo/output/static --method com.example.Globals.bump() --static-method --void-method --fields static:int:X --disl-home $DISL_HOME --trace-mode naive --test-strategy trace-based-basic", "dislHomePath is null: the DiSL home used for the demo run was not persisted anywhere in output/."],
+  "data": {
+    "$type": "JavaRunConfiguration",
+    "applicationPath": "static-app.jar",
+    "sourceCodePath": "apps/static/src",
+    "targetMethod": {
+      "$type": "JavaMethodIdentifier",
+      "methodName": "bump",
+      "returnType": "void",
+      "parameterTypes": [],
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "Globals",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": true
+    },
+    "exportableValues": [
+      {
+        "$type": "JavaFieldIdentifier",
+        "valueType": "FIELD",
+        "type": "int",
+        "internalId": 1,
+        "fieldName": "X",
+        "ownerClassIdentifier": {
+          "$type": "JavaClassIdentifier",
+          "className": "Globals",
+          "packageIdentifier": {
+            "$type": "JavaPackageIdentifier",
+            "packageName": "com.example"
+          }
+        },
+        "isStatic": true
+      }
+    ],
+    "classpathEntries": [],
+    "runtimeArguments": [],
+    "outputDirectory": "output/static",
+    "language": "JAVA",
+    "traceMode": "NAIVE",
+    "testGenerationStrategy": "trace-based-basic",
+    "maxArgumentCombinations": null,
+    "dislHomePath": null
+  },
+  "artifacts": []
+}

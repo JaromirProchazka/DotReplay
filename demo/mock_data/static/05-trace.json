@@ -1,0 +1,29 @@
+{
+  "scenario": "static",
+  "stage": "trace",
+  "provenance": "Deserialized 1:1 from traces/trace-20261028-154402-910-e36c060f-c8b8-4618-8934-421cdeb18035.ser (naive Trace: per value type, slotId -> set of observed values).",
+  "notes": ["Sets are unordered in Java; arrays are emitted sorted (numbers ascending, objects by their JSON text) for determinism."],
+  "data": {
+    "$type": "Trace",
+    "byteValues": {},
+    "charValues": {},
+    "shortValues": {},
+    "intValues": {
+      "1": [0, 1, 2, 3]
+    },
+    "longValues": {},
+    "floatValues": {},
+    "doubleValues": {},
+    "booleanValues": {},
+    "stringValues": {},
+    "objectValues": {}
+  },
+  "artifacts": [
+    {
+      "path": "output/static/traces/trace-20261028-154402-910-e36c060f-c8b8-4618-8934-421cdeb18035.ser",
+      "mediaType": "application/x-java-serialized-object",
+      "sizeBytes": 741,
+      "sha256": "0c693bc5ff9d7f0c2b5cb94c145e6d196a48b47176b8759bd35077e90a2876ec"
+    }
+  ]
+}

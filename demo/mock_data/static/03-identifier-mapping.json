@@ -1,0 +1,32 @@
+{
+  "scenario": "static",
+  "stage": "identifier-mapping",
+  "provenance": "Deserialized 1:1 from identifiers/identifierMapping4147239461275721054.ser (Map<Integer, JavaValueIdentifier>, key = internalId = trace slot id).",
+  "notes": [],
+  "data": {
+    "1": {
+      "$type": "JavaFieldIdentifier",
+      "valueType": "FIELD",
+      "type": "int",
+      "internalId": 1,
+      "fieldName": "X",
+      "ownerClassIdentifier": {
+        "$type": "JavaClassIdentifier",
+        "className": "Globals",
+        "packageIdentifier": {
+          "$type": "JavaPackageIdentifier",
+          "packageName": "com.example"
+        }
+      },
+      "isStatic": true
+    }
+  },
+  "artifacts": [
+    {
+      "path": "output/static/identifiers/identifierMapping4147239461275721054.ser",
+      "mediaType": "application/x-java-serialized-object",
+      "sizeBytes": 1033,
+      "sha256": "6e573a2668ae123833f4466952c41acd56e98b8d60730885ca38cda095cddd77"
+    }
+  ]
+}
