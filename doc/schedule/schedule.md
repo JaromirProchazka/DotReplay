@@ -1,18 +1,18 @@
 # DotReplay: Detailed Schedule
 
 | Milestone / Deliverable | Activity | Time schedule | Man-days | Notes |
-|---|---|---|---|---|
-| M1 Requirements, design, and data contract | Refinement of the requirements; study of the Auto-Debugger, SharpDetect, and the instrumentation options of the CLR | Month 1 | 1.5 | |
+| --- | --- | --- | --- | --- |
+| M1 Requirements, design, and data contract | Refinement of the requirements; study of the Auto-debugger, SharpDetect, and the instrumentation options of the CLR | Month 1 | 1.5 | |
 |  | Time-boxed feasibility experiment; choice of the instrumentation technology | Month 1 | 1.5 | |
 |  | Architecture with separated analysis, test generation, and test running modules (R10, R11) | Month 1 | 1 | |
 |  | Joint JSON schema and command-line contract with the front-end team (R9) | Month 1 | 1 | |
 |  | Repository, build, and continuous integration | Month 1 | 0.5 | |
-| M2 Walking skeleton and sample outputs | Selection of target methods and run configuration with basic validation (R1, R2, R16, R17) | Month 2 | 1 | |
+| M2 Walking skeleton and sample outputs | Selection of Target methods and Run configuration with basic validation (R1, R2, R16, R17) | Month 2 | 1 | |
 |  | Recording of numbers, strings, and arrays (R3, R21) | Month 2 | 2 | |
 |  | Test generator for the recorded values (R4) | Month 2 | 1 | |
 |  | Test runner and export of test results (R5) | Month 2 | 1 | |
 |  | JSON exporter; sample outputs for the front end (R9) | Month 2 | 0.5 | |
-| M3 Complete serial workflow | Source references in generated tests; running of selected tests (R12, R5) | Month 3 | 1 | |
+| M3 Complete serial workflow | Source references in generated tests; running of selected tests (R12, R20) | Month 3 | 1 | |
 |  | Traces of test runs (R5) | Month 3 | 1 | |
 |  | Handling of sensitive data (R18) | Month 3 | 0.5 | |
 |  | Release of the Must features for the front end | Month 3 | 0.5 | |

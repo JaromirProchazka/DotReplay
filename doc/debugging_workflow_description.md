@@ -1,42 +1,41 @@
 # Debugging workflow
 
-This document describes the abstract debugging workflow in detail. The pseudo-code bellow illustrates the inputs required, and the loop of the workflow running intill the bugfix passes all tests and is validated.
+This document describes the abstract debugging workflow in detail. The pseudo-code below shows the required inputs and the workflow loop, which runs until the bug fix passes all tests and is validated.
 
 ```
 Input: target application A, target method identifier Im
-Output: Generated test suite for target method m
-    done ← f alse
-    m ← f indMethodByIdentif ier(Im)
+Output: generated test suite for target method m
+    done ← false
+    m ← findMethodByIdentifier(Im)
     testSuite ← {}
-    while ¬ done do
+    while ¬done do
         D ← CreateInstrumentation(m)
-        (V1, V2, . . . , Vn) ← RunDynamicAnalysis(A, D)
-        testSuite ← GenerateT ests(m,(V1, V2, . . . , Vn))
-        allP assed = true
+        (V1, V2, ..., Vn) ← RunDynamicAnalysis(A, D)
+        testSuite ← GenerateTests(m, (V1, V2, ..., Vn))
+        allPassed ← true
         for T ∈ testSuite do
-            (result, trace) ← ExecuteT est(T)
-            if result = f ailed then allP assed = f alse
+            (result, trace) ← ExecuteTest(T)
+            if result = failed then allPassed ← false
         end for
-        if allP assed then
+        if allPassed then
             done ← ValidateBugFix() // Developer task
         end if
-        if ¬ done then
-            // Developer will inspect the trace and edit
-            // source code to create bug fixes
+        if ¬done then
+            // Developer inspects the trace and edits
+            // the source code to create bug fixes
         end if
     end while
     return testSuite
 ```
 
-There are parts of this workflow reserved for the developers intervention like the source code updating with bugfixes and Bugfix validation.
+Some parts of this workflow are reserved for the developer's intervention, like updating the source code with bug fixes and validating the bug fix.
 
-# Step by step description
+## Step-by-step description
 
-1. Developer chooses a set of procedures and variables in source code relevant to the bug. On these will be run the dynamic analysis.
+1. The developer chooses a set of procedures and variables in the source code relevant to the bug. The dynamic analysis runs on these.
 
-2. System runs dynamic analysis. For each relevant
-   method call, it records values of arguments and fields of the receiver object (internal state), the return value (if used), and runtime values of relevant global variables and contents of global data structures.
+2. The System runs the dynamic analysis. For each relevant method call, it records the values of the arguments and the fields of the receiver object (internal state), the return value (if used), and the runtime values of relevant global variables and contents of global data structures.
 
-3. In this step, tests for all possible combinations of runtime values, collected by the dynamic analysis, are generated. This implies that at least one test case is generated for each observed call of every target method, because the developer does not know exactly — right at the beginning of a debugging session — which method calls and their argument values trigger the runtime error.
+3. In this step, tests for all possible combinations of runtime values collected by the dynamic analysis are generated. This implies that at least one test case is generated for each observed call of every Target method, because the developer does not know exactly — right at the beginning of a debugging session — which method calls and argument values trigger the runtime error.
 
-4. When execution of all tests for possible scenarios finishes, a set of failing tests points developers towards input values (method call arguments, object fields) and source code fragments that are likely responsible for the error subject to analysis. Developers then carefully inspect the respective source code fragments to find out where and how the error occures.
+4. When the execution of all tests for possible scenarios finishes, a set of failing tests points developers towards input values (method call arguments, object fields) and source code fragments that are likely responsible for the error being analyzed. Developers then carefully inspect the respective source code fragments to find out where and how the error occurs.

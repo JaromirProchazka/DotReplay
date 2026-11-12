@@ -92,15 +92,18 @@ The `doc/` folder defines what this project is and must do. Read the relevant fi
 
 | File | Contains | Read when |
 |---|---|---|
+| `doc/README.md` | Reading order and a map of the documentation | First time in the project, or unsure which document applies |
 | `doc/dictionary.md` | Definitions of domain terms | Naming anything, or meeting an unfamiliar term |
 | `doc/vision.md` | Project purpose and scope | Judging whether a feature or approach fits the project |
 | `doc/requirements.md` | Functional and non-functional requirements (IDs) | Implementing or changing any feature |
 | `doc/use-cases/*.md` | One use case per file | Implementing behavior a user triggers. Find the matching use case first. |
+| `doc/architecture/architecture.md` | Modules, their dependencies and how the controller calls the stages | Adding or changing a module, or deciding where code belongs |
+| `doc/errors.md` | Errors, faults and value markers, split by stage | Reporting a failure or adding a new error code |
 
 Rules:
 - **Use the dictionary's terms exactly** in code, names, comments, and messages. Don't invent synonyms (if the dictionary says `Order`, don't write `Purchase`). If you need a term that isn't defined, propose a definition; don't add one silently.
 - **Docs, in the doc folder, are the source of truth for intended behavior.** If code contradicts a requirement or use case, report the conflict and ask which is right. Don't silently change either side.
 - IF the **Docs** contain any internal inconsistency or mistake, always ask about how to resolve it before any code change. Don't silently change either side.
 - **Don't edit `vision.md` or `requirements.md` unless asked.** You may propose changes.
-- When your work implements or changes behavior covered by a use case or requirement, reference it (e.g. `UC-04`, `REQ-12`) in your plan and summary, and in tests where it helps.
+- When your work implements or changes behavior covered by a use case or requirement, reference it (e.g. `R12`) in your plan and summary, and in tests where it helps.
 - If a request falls outside the vision or conflicts with a requirement, say so before implementing (see Section 1).
