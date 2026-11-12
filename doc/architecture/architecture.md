@@ -5,7 +5,7 @@
 DotReplay is a modular monolith: one CLI program built from modules with explicit, tested boundaries. It consists of a public contract, a controller, stages, a model and shared modules:
 
 - **Contract (public interface).** The `dotreplay` CLI with its commands, options, exit codes and error codes, and the versioned file formats of the session directory (R9, R26, R28). Users and other programs use DotReplay only through it. Nothing inside DotReplay depends on any particular client.
-- **Controller.** Part of the `Cli` host module. Each CLI command names one stage, and the controller calls that stage and nothing else. Around that call it parses the configuration, keeps secrets in memory, maps failures to error codes and writes the manifest. It never decides which stage runs next and never chains stages. That decision belongs to whoever calls the CLI (R23).
+- **Controller.** Part of the `Cli` host module. Each CLI command names one stage, and the controller calls that stage and nothing else. Around that call it parses the configuration, keeps secrets in memory and maps failures to error codes. It never decides which stage runs next and never chains stages. That decision belongs to whoever calls the CLI (R23).
 - **Stages.** Analysis, test generation and test running, one for each use case. Each stage is a separate module. Stages do not know about each other. Each reads its input from the model and writes its output to the model (R10, R11, R23).
 - **Model.** The session directory, which is the file part of the contract. Large data is streamed as JSON Lines (R22, R28).
 - **Shared modules.** They are not stages, so using them does not break R23.

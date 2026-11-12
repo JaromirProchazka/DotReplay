@@ -99,7 +99,8 @@ The `doc/` folder defines what this project is and must do. Read the relevant fi
 
 Rules:
 - **Use the dictionary's terms exactly** in code, names, comments, and messages. Don't invent synonyms (if the dictionary says `Order`, don't write `Purchase`). If you need a term that isn't defined, propose a definition; don't add one silently.
-- **Docs are the source of truth for intended behavior.** If code contradicts a requirement or use case, report the conflict and ask which is right. Don't silently change either side.
+- **Docs, in the doc folder, are the source of truth for intended behavior.** If code contradicts a requirement or use case, report the conflict and ask which is right. Don't silently change either side.
+- IF the **Docs** contain any internal inconsistency or mistake, always ask about how to resolve it before any code change. Don't silently change either side.
 - **Don't edit `vision.md` or `requirements.md` unless asked.** You may propose changes.
 - When your work implements or changes behavior covered by a use case or requirement, reference it (e.g. `UC-04`, `REQ-12`) in your plan and summary, and in tests where it helps.
 - If a request falls outside the vision or conflicts with a requirement, say so before implementing (see Section 1).

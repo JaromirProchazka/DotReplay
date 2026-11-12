@@ -1,6 +1,6 @@
 # Demo apps for .NET
 
-C# / .NET 8 ports of the Java demo apps in `demo/apps/`. Each one is a target for the .NET version of the auto-debugger and does the same thing as its Java original, so its pipeline output can be compared with `demo/mock_data/<scenario>/`.
+C# / .NET 8 ports of the Java Auto-debugger demo apps in Auto-debugger `demo/apps/`. Each one is a target for the .NET version of the auto-debugger and does the same thing as its Java original, so its pipeline output can be compared with `demo/mock_data/<scenario>/`.
 
 | Folder | Java original | Target method (.NET) | Mock data |
 |---|---|---|---|

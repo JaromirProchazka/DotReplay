@@ -1,8 +1,8 @@
 # Test generation
 
-- **Requirements covered:** R4, R22
+- **Requirements covered:** R4, R22, R31
 - **Preconditions:**
-  1. have an object file with captured runtime values
+  1. have an analyses output file
 
 ## Basic Flow
 
@@ -12,8 +12,8 @@
 
 ## Alternative Flows
 
-1. a. System terminates with `INVALID_RUNTIME_ARGUMENTS` error. 
-3. a. System generates a `TEST_COMPILE_ERROR` error. 
+- 1.a. System terminates with `INVALID_RUNTIME_ARGUMENTS` error. 
+- 3.a. System generates a `TEST_COMPILE_ERROR` error. 
 
 ## Postconditions
 

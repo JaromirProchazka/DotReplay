@@ -8,8 +8,8 @@
 |  | Joint JSON schema and command-line contract with the front-end team (R9) | Month 1 | 1 | |
 |  | Repository, build, and continuous integration | Month 1 | 0.5 | |
 | M2 Walking skeleton and sample outputs | Selection of target methods and run configuration with basic validation (R1, R2, R16, R17) | Month 2 | 1 | |
-|  | Recording of numbers, strings, and arrays (R3) | Month 2 | 2 | |
-|  | Per-call test generator for the recorded values (R4) | Month 2 | 1 | |
+|  | Recording of numbers, strings, and arrays (R3, R21) | Month 2 | 2 | |
+|  | Test generator for the recorded values (R4) | Month 2 | 1 | |
 |  | Test runner and export of test results (R5) | Month 2 | 1 | |
 |  | JSON exporter; sample outputs for the front end (R9) | Month 2 | 0.5 | |
 | M3 Complete serial workflow | Source references in generated tests; running of selected tests (R12, R5) | Month 3 | 1 | |

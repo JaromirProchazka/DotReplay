@@ -1,6 +1,6 @@
 # Demo mock data
 
-JSON versions of everything the Java auto-debugger pipeline produced for the four demo scenarios in `demo/output/`. They are fixtures for:
+JSON versions of everything the Java auto-debugger pipeline produced for the four demo scenarios in `demo/output/` from the Auto-debugger project. They are fixtures for:
 
 - the .NET/C# port, as reference output per stage;
 - a decoupled front-end that talks to either backend, as mock backend responses.

@@ -6,11 +6,11 @@
 | R2. System lets user specify the Target application and its configuration to run.                   | Must     | User   | Functional     | Normal      |              |  |
 | R3. System produces from an target application execution and target methods a set of collected argument values. Supurts primitive types: numbers, bool, char, enum and null. | Must     | User   | Functional     | Normal      | R1,R2          |  |
 | R4. System, given a set of collected argument values and target methods, generates a test suit.                 | Must     | User   | Functional     | Normal      | R1,R3          |  |
-| R5. System given a test suite can run these tests and collect their results and traces.                          | Must     | User   | Functional     | Normal      | R4            |  |
-| R6. System can decide, which of the workflow step is run next and instruct user to about their required actions   | Should    | User   | Functional     | Exciting    | R3,R4,R5        |  |
+| R5. System given a test suite and a list of selected tests can run these tests and collect their results and traces.                          | Must     | User   | Functional     | Normal      | R4            |  |
+| R6. There is a setting or mode of the System, where it can decide, which of the workflow step is run next and instruct user about their required actions   | Should    | User   | Functional     | Exciting    | R3,R4,R5        |  |
 | R7. System recording works on multi-threaded target applications. | Should   | System | Functional | Normal      | R2,R3            |  |
 | R8. System can find and generate tests for concurrency errors like data races and deadlocks.                    | Could   | User   | Functional     | Exciting    | R4,R7,R24          |  |
-| R9. System implements a documented "Back-end API" shared with the Java Auto-debugger and AVM for C++, that can be used by separate Front-end GUI. | Must     | System | Functional     | Normal      |              |  |
+| R9. System implements a documented, versioned "Back-end API" shared with the Java Auto-debugger and AVM for C++, that can be used by separate Front-end GUI. | Must     | System | Functional     | Normal      |              |  |
 | R10. System separates test generation module from the Analysis module.                                          | Should   | System | Non-functional | Expected | R4,R3          |  |
 | R11. System separates test generation module from the tests running module.                                     | Should   | System | Non-functional | Expected | R4,R5          |  |
 | R12. The tests are anotate with references to target aplication source code, to the part the test is for.       | Should    | User   | Functional     | Indifferent | R4            | Needed by front-end. |
@@ -19,7 +19,7 @@
 | R15. A run configuration in the case study on the Target machine starts executing in less then 10s. | Should | User | Non-functional | Expected | | So that target app is not recompiled on each new run |
 | R16. The specified Target methods are first validated. The methods being invalid resutls in an error report without crashing. | Could | System | Non-functional | Normal | R1 |  |
 | R17. The specified Target application and configuration is first validated. These being invalid resutls in a error report without crashing. | Could | System | Non-functional | Normal | R2 |  |
-| R18. Sensitive data (environment variables, program arguments) are not kept beyond the session. | Must | Business | Non-functional | Normal | | What if the argument capture catches a user password as target function argument and record it inside a test? |
+| R18. Sensitive data which are not part of the argument capture (environment variables, program arguments) are not kept beyond the session. | Must | Business | Non-functional | Normal | | It is users responcibility to not pass sensitive data to runtime values captured by analyses. |
 | R19. System supports .NET 8, x64, Windows. | Must | System | Non-functional | Normal | | |
 | R20. System given a test suit can run selected tests via the CLI. | Must     | User   | Functional     | Normal      | R5            | Needed by the front end. |
 | R21. System produces from an target application execution and target methods a set of collected argument values. Supurts more complex types: strings, arrays. | Must     | User   | Functional     | Normal      | R1,R2,R3          |  |
@@ -32,16 +32,15 @@
 | R28. The data contract is versioned, and every stage output is published atomically with a manifest containing its status. | Should | System | Non-functional | Expected | R9 | |
 | R29. Captured values are bounded by configurable limits (depth, collection size, string length); values exceeding them are marked `TRUNCATED`. | Could | System | Non-functional | Normal | R13,R14 | |
 | R30. The test-generation stage accepts collected values together with concurrency information (e.g. thread IDs, per-thread call order). |	Should |	System | Functional |	Normal | R4,R7,R24 | The exact concurrency information is not yet decided; thread IDs are the first candidate. |
-| R31. Tests are generated for all possible combinations of collected runtime values called product tests.  | Must | User | Functional | Normal | R4,R24 | |
-| R32. There is a filter on the product tests removing some useless once. | Could | User | Functional | Normal | R31 | |
+| R31. Tests are generated for all possible combinations of collected runtime values (up to a test count limit) called exhaustive combinatorial testing.  | Must | User | Functional | Normal | R4,R24 | |
+| R32. There is a filter on the exhaustive combinatorial tests removing some useless once. | Could | System | Functional | Normal | R31 | |
+| R33. The Stages write their results into output atomically. | Must | System | Non-functional | Expected | R9 | For the frontend, so that it does not read partial files |
 
 
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-
-TODO: versioned schema, atomic writes, run manifest, partial/crashed-run status, encoding of "not recorded"/unsupported values
+<!-- | | | | | | | |  -->
+<!-- | | | | | | | |  -->
+<!-- | | | | | | | |  -->
+<!-- | | | | | | | |  -->
 
 # Lexicon
 
