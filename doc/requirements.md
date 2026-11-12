@@ -16,7 +16,7 @@
 | R12. The tests are anotate with references to target aplication source code, to the part the test is for.       | Should    | User   | Functional     | Indifferent | R4            | Needed by front-end. |
 | R13. The system also supports object type, serializable by reflection, for target application argument values collection and building (reconstruction). | Should | User | Functional | Normal | R3,R4,R21 |  |
 | R14. The instrumentation and analyses for the case-study application on the "Target Machine" adds less than 100% to execution time. | Should | User | Non-functional | Expected | |  |
-| R15. A run configuration in the case study on the Target machine starts executing in less then 10s. | Should | User | Non-functional | Expected | |  |
+| R15. A run configuration in the case study on the Target machine starts executing in less then 10s. | Should | User | Non-functional | Expected | | So that target app is not recompiled on each new run |
 | R16. The specified Target methods are first validated. The methods being invalid resutls in an error report without crashing. | Could | System | Non-functional | Normal | R1 |  |
 | R17. The specified Target application and configuration is first validated. These being invalid resutls in a error report without crashing. | Could | System | Non-functional | Normal | R2 |  |
 | R18. Sensitive data (environment variables, program arguments) are not kept beyond the session. | Must | Business | Non-functional | Normal | | What if the argument capture catches a user password as target function argument and record it inside a test? |
@@ -32,8 +32,11 @@
 | R28. The data contract is versioned, and every stage output is published atomically with a manifest containing its status. | Should | System | Non-functional | Expected | R9 | |
 | R29. Captured values are bounded by configurable limits (depth, collection size, string length); values exceeding them are marked `TRUNCATED`. | Could | System | Non-functional | Normal | R13,R14 | |
 | R30. The test-generation stage accepts collected values together with concurrency information (e.g. thread IDs, per-thread call order). |	Should |	System | Functional |	Normal | R4,R7,R24 | The exact concurrency information is not yet decided; thread IDs are the first candidate. |
+| R31. Tests are generated for all possible combinations of collected runtime values called product tests.  | Must | User | Functional | Normal | R4,R24 | |
+| R32. There is a filter on the product tests removing some useless once. | Could | User | Functional | Normal | R31 | |
 
 
+| | | | | | | |
 | | | | | | | |
 | | | | | | | |
 | | | | | | | |
