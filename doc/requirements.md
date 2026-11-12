@@ -23,7 +23,7 @@
 | R19. The System supports .NET 8, x64, Windows. | Must | System | Non-functional | Normal | | |
 | R20. The System, given a Test suite, can run selected tests via the CLI using a List of selected tests. | Must | User | Functional | Normal | R5 | Needed by the front end. |
 | R21. The System produces, from a Target application execution and Target methods, a set of collected Argument values. Supports more complex types: strings, arrays. | Must | User | Functional | Normal | R1, R2, R3 | |
-| R22. The System, while generating tests, does not generate them all at once in memory, but continuously writes them to the output file through a pipeline. | Should | System | Non-functional | Normal | R4 | |
+| R22. The System, while generating tests, does not generate them all at once in memory, but continuously writes them to the output file through a pipeline. | Should | System | Non-functional | Normal | R4 | Write is atomic from the outside, but in the process of writing use pipeline |
 | R23. Stages are invoked only through the controller and exchange data only through the model. | Should | System | Non-functional | Expected | R10, R11 | |
 | R24. The analysis stage supports multiple swappable Strategies, including custom ones (concurrency Strategies can be swapped in at this point). Every Strategy writes the collected values in the common format. | Should | System | Non-functional | Normal | R3 | |
 | R25. The User can select and configure built-in or custom analysis Strategies in the Run configuration. | Should | User | Functional | Normal | R2, R24 | |

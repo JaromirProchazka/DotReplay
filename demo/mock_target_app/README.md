@@ -9,7 +9,7 @@ C# / .NET 8 ports of the Java Auto-debugger demo apps in Auto-debugger `demo/app
 ## Build and run
 
 ```bash
-cd demo/mock_app/args
+cd demo/mock_target_app/args
 dotnet build -c Debug        # -> bin/Debug/net8.0/calc-app.dll
 dotnet run                   # or: dotnet bin/Debug/net8.0/calc-app.dll
 ```

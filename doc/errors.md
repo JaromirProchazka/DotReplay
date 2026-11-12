@@ -46,7 +46,9 @@ Errors and faults tell the User that something in their configuration or Target 
 
 ## Value markers
 
-| Marker | Stage | Meaning | Source |
-| --- | --- | --- | --- |
-| `UNSUPPORTED` | Analysis | The value cannot be captured, e.g. an unsupported object. | [analysis.md](use-cases/analysis.md) 5.a, R26 |
-| `TRUNCATED` | Analysis | The value exceeds a configured limit (depth, collection size, string length). | R29 |
+| Marker | Contract kind | Stage | Meaning | Source |
+| --- | --- | --- | --- | --- |
+| `UNSUPPORTED` | `skipped` | Analysis | The value cannot be captured, e.g. an unsupported object. | [analysis.md](use-cases/analysis.md) 5.a, R26 |
+| `TRUNCATED` | `truncated` | Analysis | The value exceeds a configured limit (depth, collection size, string length). | R29 |
+
+In `trace.json`, a marked value is written as a value of the matching contract `kind`.

@@ -1,0 +1,7 @@
+{
+  "assembly": "demo/mock_target_app/args/bin/Debug/net8.0/calc-app.dll",
+  "source": "demo/mock_target_app/args",
+  "method": "Com.Example.Calculator.Add(int,int)",
+  "parameters": ["0:int", "1:int"],
+  "strategy": "record"
+}
