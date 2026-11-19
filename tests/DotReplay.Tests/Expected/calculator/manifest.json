@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "stages": {
+    "analysis": {
+      "status": "COMPLETE",
+      "completedAt": "2026-01-01T00:00:00Z"
+    },
+    "testGeneration": {
+      "status": "COMPLETE",
+      "completedAt": "2026-01-01T00:00:00Z"
+    },
+    "testRunning": {
+      "status": "COMPLETE",
+      "completedAt": "2026-01-01T00:00:00Z"
+    }
+  }
+}

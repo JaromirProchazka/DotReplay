@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "results": [
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario1",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario2",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario3",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario4",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario5",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario6",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario7",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario8",
+      "status": "passed",
+      "durationMs": 1
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario9",
+      "status": "passed",
+      "durationMs": 1
+    }
+  ]
+}

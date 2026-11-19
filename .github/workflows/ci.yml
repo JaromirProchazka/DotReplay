@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    env:
+      CONFIGURATION: Release
+      # The CLI under test. To test the real app instead of the mock, build it below and point this at its output.
+      CLI_PROJECT: demo/mock_dotreplay
+      DOTREPLAY_CLI: demo/mock_dotreplay/bin/Release/net8.0/dotreplay.dll
+      DOTREPLAY_TARGET_APP: demo/mock_target_app/args/bin/Release/net8.0/calc-app.dll
+      DOTNET_NOLOGO: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build the Target application
+        run: dotnet build demo/mock_target_app/args -c ${{ env.CONFIGURATION }}
+
+      - name: Build the CLI
+        run: dotnet build ${{ env.CLI_PROJECT }} -c ${{ env.CONFIGURATION }}
+
+      - name: Run the tests
+        run: dotnet test tests/DotReplay.Tests -c ${{ env.CONFIGURATION }} --logger trx --results-directory TestResults
+
+      - name: Upload the test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults

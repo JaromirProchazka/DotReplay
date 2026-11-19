@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "calls": [
+    {
+      "callIndex": 0,
+      "entry": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 1
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 2
+        }
+      },
+      "exit": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 1
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 2
+        }
+      },
+      "outcome": {
+        "kind": "returned"
+      }
+    },
+    {
+      "callIndex": 1,
+      "entry": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 3
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 4
+        }
+      },
+      "exit": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 3
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 4
+        }
+      },
+      "outcome": {
+        "kind": "returned"
+      }
+    },
+    {
+      "callIndex": 2,
+      "entry": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 5
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 6
+        }
+      },
+      "exit": {
+        "0": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 5
+        },
+        "1": {
+          "kind": "primitive",
+          "type": "System.Int32",
+          "value": 6
+        }
+      },
+      "outcome": {
+        "kind": "returned"
+      }
+    }
+  ]
+}

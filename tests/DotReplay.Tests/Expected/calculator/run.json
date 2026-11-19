@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "language": "dotnet",
+  "target": {
+    "signature": "Com.Example.Calculator.Add(int,int)"
+  },
+  "captured": [
+    {
+      "captureId": 0,
+      "kind": "argument",
+      "name": "a",
+      "type": "System.Int32"
+    },
+    {
+      "captureId": 1,
+      "kind": "argument",
+      "name": "b",
+      "type": "System.Int32"
+    }
+  ],
+  "typeNames": {
+    "System.Int32": "int"
+  },
+  "traceMode": "naive",
+  "recorded": {
+    "exit": true,
+    "outcome": true
+  },
+  "counts": {
+    "calls": 3,
+    "tests": 9
+  },
+  "status": "ok",
+  "createdAt": "2026-01-01T00:00:00Z"
+}

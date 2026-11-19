@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "tests": [
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario1",
+      "callIndices": [
+        0
+      ]
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario2",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario3",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario4",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario5",
+      "callIndices": [
+        1
+      ]
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario6",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario7",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario8",
+      "callIndices": []
+    },
+    {
+      "testId": "Com.Example.CalculatorTest#TestAdd_Scenario9",
+      "callIndices": [
+        2
+      ]
+    }
+  ]
+}

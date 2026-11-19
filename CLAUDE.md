@@ -105,3 +105,9 @@ Rules:
 - **Don't edit the Vision or Requirements chapters of `documentation.md` unless asked.** You may propose changes.
 - When your work implements or changes behavior covered by a use case or requirement, reference it (e.g. `R12`) in your plan and summary, and in tests where it helps.
 - If a request falls outside the vision or conflicts with a requirement, say so before implementing (see Section 1).
+
+## 7. Branches
+
+- **`dev`** is the working branch. Commit all new changes to `dev` only, or to a branch created from `dev` and merged back into it.
+- **`main`** holds released versions. Never commit to `main` directly; a new version reaches `main` only by merging `dev` into it.
+- Before committing, check the current branch (`git branch --show-current`). If it is `main`, stop and switch to `dev`.
