@@ -42,7 +42,7 @@ Errors and faults tell the User that something in their configuration or Target 
 | Code | Stage | Meaning | Source |
 | --- | --- | --- | --- |
 | `TEST_COMPILE_ERROR` | Test generation | A generated test does not compile. The test is removed. | [test_generation.md](use-cases/test_generation.md) 3.a |
-| `TEST_TIMEOUT` | Test running | A test ran longer than the configured timeout. The test is terminated and its result is marked `TEST_TIMEOUT`. | [tests_run.md](use-cases/tests_run.md) 3.b, R27 |
+| `TEST_TIMEOUT` | Test running | A test ran longer than the configured timeout. The test is terminated and its result is marked `TEST_TIMEOUT`: in `results.json` it has status `error` with the fault in its message. | [tests_run.md](use-cases/tests_run.md) 3.b, [pipeline_run.md](use-cases/pipeline_run.md) 4.b, R27 |
 
 ## Value markers
 

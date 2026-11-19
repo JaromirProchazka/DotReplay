@@ -25,6 +25,8 @@
   - `COMPLETE`: the output is whole. It may still contain value markers (`UNSUPPORTED`, `TRUNCATED`), which are limitations of the System.
   - `PARTIAL`: the output is usable but incomplete (the `maxArgumentCombinations` limit was reached, a fault removed or terminated a test, or a crash or timeout stopped the stage after it had collected some output).
   - `FAILED`: the stage ended with an error before producing any output.
+
+  After a full run, the Manifest also holds the next-step hint: a message telling the User their next action (R6).
 - **Run configuration**: A configuration file specifying the System's runtime properties.
 
 <!-- - ****: -->

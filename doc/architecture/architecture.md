@@ -5,11 +5,11 @@
 DotReplay is a modular monolith: one CLI program built from modules with explicit, tested boundaries. It consists of a Back-end API, a controller, stages, a model and shared modules:
 
 - **Back-end API (public interface).** The `dotreplay` CLI with its commands, options, exit codes and error codes, and the versioned file formats of the Session directory (R9, R26, R28). Users and other programs use DotReplay only through it. Nothing inside DotReplay depends on any particular client. The file formats follow version 1 of the shared [Auto Debugger contract](https://github.com/norilanda/debug-infra-gentests/tree/develop/vs-code-extension/contract): `run.json`, `trace.json`, `tests.json` and `results.json`. DotReplay adds its own `manifest.json`, which the contract allows.
-  - `dotreplay [options]`: the full run.
+  - `dotreplay [options]`: the full run ([pipeline_run.md](../use-cases/pipeline_run.md), R6).
   - `dotreplay analyze [options]`: the analysis stage.
   - `dotreplay generate-tests --run-dir <dir>`: the test generation stage.
   - `dotreplay run-tests --run-dir <dir> [--test <testId>]…`: the test running stage, as the contract defines it.
-- **Controller.** Part of the `Cli` host module. Each stage command names one stage, and the controller calls that stage and nothing else. Around that call it parses the configuration, keeps secrets in memory, maps failures to error codes and writes the Manifest. It never decides which stage runs next. That decision belongs to whoever calls the CLI (R23). The one exception is the full run, which the contract expects: it calls the three stages in a fixed order and stops after the first `FAILED` stage. It never chooses a step based on a stage's output.
+- **Controller.** Part of the `Cli` host module. Each stage command names one stage, and the controller calls that stage and nothing else. Around that call it parses the configuration, keeps secrets in memory, maps failures to error codes and writes the Manifest. It never decides which stage runs next. That decision belongs to whoever calls the CLI (R23). The one exception is the full run, which the contract expects: it calls the three stages in a fixed order and stops after the first `FAILED` stage. It never chooses a step based on a stage's output. At the end it writes a next-step hint for the User to the Manifest and to the standard output (R6).
 - **Stages.** Analysis, test generation and test running, one for each use case. Each stage is a separate module. Stages do not know about each other. Each reads its input from the model and writes its output to the model (R10, R11, R23).
 - **Model.** The Session directory, which is the file part of the Back-end API.
 - **Shared modules.** They are not stages, so using them does not break R23.

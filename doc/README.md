@@ -16,7 +16,7 @@ Read these in order the first time:
 | File | Use it when |
 | --- | --- |
 | [requirements.md](requirements.md) | Implementing or changing a feature. Requirements have IDs (`R1`, `R2`, …); reference them in plans, commits and tests. |
-| [use-cases/](use-cases/) | Implementing the behavior of a stage. There is one use case per stage: [analysis](use-cases/analysis.md), [test generation](use-cases/test_generation.md) and [test running](use-cases/tests_run.md). |
+| [use-cases/](use-cases/) | Implementing the behavior of a stage or the full run. There is one use case per stage, [analysis](use-cases/analysis.md), [test generation](use-cases/test_generation.md) and [test running](use-cases/tests_run.md), and one for the full run, [pipeline run](use-cases/pipeline_run.md). |
 | [errors.md](errors.md) | Reporting a failure. It lists every error, fault and value marker by stage, and how each affects the Manifest status. |
 | [evaluation.md](evaluation.md) | Planning benchmarks and the case study (R14, R15). |
 | [risks.md](risks.md) | Judging performance and technology limits. |
