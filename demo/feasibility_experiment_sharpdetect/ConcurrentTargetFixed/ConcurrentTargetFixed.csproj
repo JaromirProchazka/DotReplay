@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The sources of ConcurrentTarget with both bugs fixed (FIXED), under the same assembly name. Used only to show
+       that the generated tests pass once the bugs are fixed. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>concurrent-target</AssemblyName>
+    <RootNamespace>Com.Example.Concurrent</RootNamespace>
+    <DefineConstants>$(DefineConstants);FIXED</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ConcurrentTarget\*.cs" />
+  </ItemGroup>
+
+</Project>

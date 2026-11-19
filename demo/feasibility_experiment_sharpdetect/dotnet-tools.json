@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "sharpdetect": {
+      "version": "2.1.4",
+      "commands": [
+        "sharpdetect"
+      ],
+      "rollForward": false
+    }
+  }
+}

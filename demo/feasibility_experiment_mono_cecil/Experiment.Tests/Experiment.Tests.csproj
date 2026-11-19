@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RepositoryTests>..\..\..\tests\DotReplay.Tests\</RepositoryTests>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="9.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The checks of tests/, reused unchanged: contract schemas and rules, golden files, Session directories -->
+    <Compile Include="$(RepositoryTests)Infrastructure\Contract.cs" Link="Infrastructure\Contract.cs" />
+    <Compile Include="$(RepositoryTests)Infrastructure\Expected.cs" Link="Infrastructure\Expected.cs" />
+    <Compile Include="$(RepositoryTests)Infrastructure\SessionDirectory.cs" Link="Infrastructure\SessionDirectory.cs" />
+    <None Include="$(RepositoryTests)Contract\schemas\*.json" Link="Contract\schemas\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(RepositoryTests)Expected\calculator\*.json" Link="Expected\calculator\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Built first, then run as processes; the tests never reference their code -->
+    <ProjectReference Include="..\Experiment\Experiment.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\ExtraTarget\ExtraTarget.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\mock_target_app\args\CalcApp.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>
