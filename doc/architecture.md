@@ -5,7 +5,7 @@
 DotReplay is a modular monolith: one CLI program built from modules with explicit, tested boundaries. It consists of a Back-end API, a controller, stages, a model and shared modules:
 
 - **Back-end API (public interface).** The `dotreplay` CLI with its commands, options, exit codes and error codes, and the versioned file formats of the Session directory (R9, R26, R28). Users and other programs use DotReplay only through it. Nothing inside DotReplay depends on any particular client. The file formats follow version 1 of the shared [Auto Debugger contract](https://github.com/norilanda/debug-infra-gentests/tree/develop/vs-code-extension/contract): `run.json`, `trace.json`, `tests.json` and `results.json`. DotReplay adds its own `manifest.json`, which the contract allows.
-  - `dotreplay [options]`: the full run ([pipeline_run.md](../use-cases/pipeline_run.md), R6).
+  - `dotreplay [options]`: the full run ([pipeline_run.md](use-cases/pipeline_run.md), R6).
   - `dotreplay analyze [options]`: the analysis stage.
   - `dotreplay generate-tests --run-dir <dir>`: the test generation stage.
   - `dotreplay run-tests --run-dir <dir> [--test <testId>]…`: the test running stage, as the contract defines it.
@@ -71,5 +71,5 @@ The System is a modular monolith with a dispatching controller. The controller, 
 
 The controller calls each stage in two steps:
 
-1. **Validate.** The stage checks its input: the Run configuration for analysis, and the outputs of the earlier step, read from the model through `Core`, for generation and running. If the input is invalid or missing, the stage reports a documented error code (see [errors.md](../errors.md)). Nothing else is run.
+1. **Validate.** The stage checks its input: the Run configuration for analysis, and the outputs of the earlier step, read from the model through `Core`, for generation and running. If the input is invalid or missing, the stage reports a documented error code (see [errors.md](errors.md)). Nothing else is run.
 2. **Run.** The stage does its job and writes its result back to the model through `Core`. The controller then writes the Manifest, which marks the output as `COMPLETE`, `PARTIAL` or `FAILED`.
