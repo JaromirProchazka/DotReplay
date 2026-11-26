@@ -2,11 +2,11 @@
 
 | Milestone / Deliverable | Activity | Time schedule | Man-days | Notes |
 | --- | --- | --- | --- | --- |
-| M1 Requirements, design, and data contract | Refinement of the requirements; study of the Auto-debugger, SharpDetect, and the instrumentation options of the CLR | Month 1 | 1.5 | |
-|  | Time-boxed feasibility experiment; choice of the instrumentation technology | Month 1 | 1.5 | |
-|  | Architecture with separated analysis, test generation, and test running modules (R10, R11) | Month 1 | 1 | |
-|  | Joint JSON schema and command-line contract with the front-end team (R9) | Month 1 | 1 | |
-|  | Repository, build, and continuous integration | Month 1 | 0.5 | |
+| M1 Requirements, design, and data contract | Refinement of the requirements; study of the Auto-debugger, SharpDetect, and the instrumentation options of the CLR | Month 1 | 1.5 | ✅ |
+|  | Time-boxed feasibility experiment; choice of the instrumentation technology | Month 1 | 1.5 | ✅ |
+|  | Architecture with separated analysis, test generation, and test running modules (R10, R11) | Month 1 | 1 | ✅ |
+|  | Joint JSON schema and command-line contract with the front-end team (R9) | Month 1 | 1 | ✅ |
+|  | Repository, build, and continuous integration | Month 1 | 0.5 | ✅ |
 | M2 Walking skeleton and sample outputs | Selection of Target methods and Run configuration with basic validation (R1, R2, R16, R17) | Month 2 | 1 | |
 |  | Recording of numbers, strings, and arrays (R3, R21) | Month 2 | 2 | |
 |  | Test generator for the recorded values (R4) | Month 2 | 1 | |

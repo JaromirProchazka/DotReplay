@@ -51,6 +51,7 @@ flowchart TB
     RUN["Running"]
   end
   CUSTOM["Custom Strategy (user assembly)"]
+  GENS["Test generators (swappable)"]
   INS["Instrumentation (not a stage)"]
   CORE["Core (shared kernel)"]
   MODEL[("Session directory")]
@@ -58,6 +59,7 @@ flowchart TB
   CLI --> GEN
   CLI --> RUN
   AN -. "loads one Strategy" .-> CUSTOM
+  GEN -. "selects one" .-> GENS
   AN --> INS
   RUN --> INS
   Stages --> CORE
@@ -66,6 +68,21 @@ flowchart TB
 ```
 
 The System is a modular monolith with a dispatching controller. The controller, in the `Cli` module, calls the stage modules (analysis, test generation, test running), which are mutually decoupled: no stage module references another. The stages write their outputs as JSON files in the Session directory (the model) through the `Core` writers. Any Back-end API client can use these outputs. The analysis stage runs one swappable Strategy, selected by the Run configuration or a command-line flag. The Analysis module creates the built-in Strategy or loads the custom one. Solid arrows are compile-time dependencies, and the dotted arrow is the run-time loading of a custom Strategy.
+
+The **test generation stage has swappable test generators**. They are built into the Generation module behind one interface. The run configuration or a command-line flag selects one generator per run, as it selects the strategy in analysis. The default generator is exhaustive combinatorial testing (R31, R32). The temporal trace-based and LLM-based generators of the Java Auto-debugger can be added in O2. A concurrency generator produces tests from the findings of the concurrency strategies (R8, R30, O1). It runs in addition to the selected generator whenever the analysis output contains findings. Unlike strategies, generators are not loaded from user assemblies: every strategy writes the common format (R24), so the built-in generators can read the output of any strategy, including a custom one.
+
+
+## Custom strategies
+
+The default **record strategy** simply records the traces of the target methods, as the Java Auto-debugger does. It runs the instrumented target application once, without influencing it. For every call of a target method, it records the argument values and the selected fields at the entry and at the exit, together with the outcome of the call.
+
+A **sharpdetect strategy** uses SharpDetect for testing concurrent applications in O1, as a custom strategy. SharpDetect itself captures only primitive values and object IDs, not complex values, so it is used only for concurrent applications. In the M1 experiment, SharpDetect found a deadlock and a data race. Its findings, joined with the values recorded by the Mono.Cecil recorder, were enough to generate one test per bug. Each test fails on the buggy code and passes on the fixed code. This holds under the following conditions:
+  -  SharpDetect reports only where a bug is, so the argument values must come from the Mono.Cecil recorder.
+  -  The recorder must not synchronize threads. Its locks add an ordering between the threads that can hide data races from SharpDetect.
+  -  SharpDetect reports only deadlocks that actually happen in the analysed run.
+  -  Its HTML report is its only output, so the SharpDetect version is pinned.
+  -  The generated tests reproduce a bug reliably only if DotReplay controls the thread schedule in the test. Without that, a bug is reproduced only sometimes.
+
 
 ## Stages
 
